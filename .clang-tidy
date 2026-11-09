@@ -1,0 +1,40 @@
+# Conventions de nommage Google + checks google-*
+Checks: >
+  google-*,
+  readability-identifier-naming
+
+HeaderFilterRegex: '.*'
+
+CheckOptions:
+  # Namespaces : minuscules -> api::ui::button
+  readability-identifier-naming.NamespaceCase: lower_case
+
+  # Types : UpperCamelCase -> Button, Collider
+  readability-identifier-naming.ClassCase: CamelCase
+  readability-identifier-naming.StructCase: CamelCase
+  readability-identifier-naming.EnumCase: CamelCase
+  readability-identifier-naming.TypedefCase: CamelCase
+  readability-identifier-naming.TypeAliasCase: CamelCase
+
+  # Fonctions et methodes : UpperCamelCase -> Run(), OnClick()
+  readability-identifier-naming.FunctionCase: CamelCase
+  readability-identifier-naming.MethodCase: CamelCase
+
+  # Variables locales et parametres : snake_case -> dt, position
+  readability-identifier-naming.VariableCase: lower_case
+  readability-identifier-naming.ParameterCase: lower_case
+
+  # Membres prives/proteges de class : snake_case avec _ final -> collider_, rect_, pos_
+  readability-identifier-naming.MemberCase: lower_case
+  readability-identifier-naming.PrivateMemberSuffix: _
+  readability-identifier-naming.ProtectedMemberSuffix: _
+
+  # Constantes globales / statics constexpr : prefixe k -> kMaxSize
+  readability-identifier-naming.GlobalConstantCase: CamelCase
+  readability-identifier-naming.GlobalConstantPrefix: k
+  readability-identifier-naming.ConstexprVariableCase: CamelCase
+  readability-identifier-naming.ConstexprVariablePrefix: k
+
+  # Constantes d'enum : prefixe k -> kRed
+  readability-identifier-naming.EnumConstantCase: CamelCase
+  readability-identifier-naming.EnumConstantPrefix: k
